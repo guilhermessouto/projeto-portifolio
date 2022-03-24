@@ -3,6 +3,11 @@
     text-decoration: none;
     list-style: none;}
 
+:root{--roxo: rgb(106, 9, 197);
+    --roxoForte: rgb(34, 1, 65);;
+    --laranja: rgb(236, 154, 0);
+    --azul: rgb(8, 162, 252);
+    --amarelo: rgb(235, 235, 0);}
 
 
 header{background-image: url(imagens/dev3.jpg);
@@ -48,7 +53,7 @@ nav{width: 90%;
     align-items: flex-end;
     padding-top: 100px;}
 
-nav ul{background-color: rgb(106, 9, 197);
+nav ul{background-color: var(--roxo);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -59,8 +64,7 @@ nav ul{background-color: rgb(106, 9, 197);
     height: 0;
     transition: .7s;
     overflow-y: hidden;
-    border-radius: 5px;
-    box-shadow: 1px 1px 1px 1px rgb(106, 9, 197);;}
+    border-radius: 5px;}
 
 nav ul li{font-size: 1.2em;
     margin: 5px 5px;
@@ -68,7 +72,8 @@ nav ul li{font-size: 1.2em;
     text-align: end;
     cursor: pointer;
     font-weight: bolder;
-    color: rgb(236, 230, 230);}
+    color: white;
+    text-shadow: 1px 1px 1px black;}
 
 
 
@@ -79,7 +84,7 @@ nav ul li{font-size: 1.2em;
     position: absolute;
     bottom: 100px;}
 
-.array-home{background-color: rgb(106, 9, 197);
+.array-home{background-color: var(--roxo);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,7 +96,8 @@ nav ul li{font-size: 1.2em;
 
 .array-home p{color: white;
     font-size: 1.7em;
-    padding: 5px;}
+    padding: 5px;
+    text-shadow: 1px 1px 1px blac2;}
 
 
 
@@ -119,7 +125,7 @@ nav ul li{font-size: 1.2em;
 
 
 .sec-1-padding{padding: 45px 0;
-    background-color: rgba(243, 243, 243, 0.243);}
+    background-color: rgba(243, 243, 243, 0.603);}
 
 .sec-1-padding h1{text-align: center;
     font-size: 2.2em;
@@ -133,8 +139,8 @@ nav ul li{font-size: 1.2em;
 .icon{padding: 10px;
     margin: 10px;}
 
-.icon p{text-align: justify;
-    font-size: 1.1em;}
+.icon p{font-size: 1.1em;
+    text-align: justify;}
 
 .align-icon{display: flex;
     align-items: center;
@@ -174,23 +180,74 @@ nav ul li{font-size: 1.2em;
 
 .sec-2-padding h1{text-align: center;
     font-size: 2.2em;
-    margin-bottom: 25px;}
+    margin-bottom: 35px;}
 
 .sec-2-flex{display: flex;
     justify-content: space-between;
     width: 75%;
-    margin: auto;
-}
+    margin: auto;}
 
-.align-project{width: 300px;
-    height: 350px;
-    background-color: darkred;
+.align-project{width: 18rem;
+    height: 30rem;
     margin: 5px;
-    align-self: center;}
+    border-radius: 7px;}
 
-#project1, #project2, #project3{color: white;
-    font-size: 3em;
-    text-align: center;}
+#project-1{background-image: url(imagens/projeto-1.jpg);
+    background-size: cover;
+    background-position: center center;}
+#project-2{background-image: url(imagens/projeto-2.jpg);
+    background-size: cover;
+    background-position: center center;}
+#project-3{background-image: url(imagens/projeto-3.jpg);
+    background-size: cover;
+    background-position: center center;}
+
+
+
+.descriçao-hover{padding: 0 15px;
+    height: 30rem;
+    background-color: rgba(0, 0, 0, 0.678);
+    display: flex;
+    align-items: center;
+    border-radius: 7px;}
+
+.descriçao{visibility: hidden;
+    padding: 25px 0;}
+
+.descriçao-hover:hover .descriçao{visibility: visible;}
+
+
+
+.descriçao h2{font-size: 2em;
+    margin-bottom: 15px;
+    color: var(--roxo);
+    text-shadow: 2px 2px 2px black;}
+
+.descriçao h3{font-size: 1.4em;
+    margin-bottom: 15px;}
+
+.descriçao p{font-size: 1.1em;
+    margin-bottom: 35px;
+    text-align: justify;
+    color: white;
+    text-shadow: 2px 2px 2px black;}
+
+.descriçao button{padding: 15px 25px;
+    background-color: var(--roxo);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: .95em;}
+
+.h3-flex{display: flex;
+    justify-content: space-between;
+    width: 45%;}
+
+#h3-html{color: var(--laranja);}
+#h3-css{color: var(--azul);}
+#h3-js{color: var(--amarelo);}
 
 
 
@@ -198,13 +255,55 @@ nav ul li{font-size: 1.2em;
 
 
 
-@media(max-width: 699px){
-    .sec-1-flex{flex-wrap: wrap;
-        width: 95%;}
-    
+
+
+
+footer{padding: 40px 0;
+    background-color: var(--roxoForte);}
+
+.footer-flex{display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin: auto;}
+
+.footer-flex p{color: white;
+    font-size: 1.1em;
+    text-shadow: 3px 3px 3px black;}
+.footer-flex a{color: var(--laranja);}
+a:hover{text-decoration: underline;}
+
+.footer-icons{display: flex;}
+
+#github-icon img{background-size: cover;
+    width: 35px;
+    height: 35px;
+    margin-right: 30px} 
+
+#link-icon img{background-size: cover;
+    width: 35px;
+    height: 35px}
+
+
+
+
+
+@media(max-width: 799px){
     .sec-2-flex{flex-wrap: wrap;
         justify-content: center;
-        width: 95%;}}
+        width: 95%;}
+
+    .align-project{width: 95%;
+        margin: 15px 0;}}
+
+@media(max-width: 650px){
+    .sec-1-flex{flex-wrap: wrap;}}
+
+@media(max-width: 429px){
+    .footer-flex{flex-direction: column;}
+    .footer-icons{margin-top: 10px;}
+}
+
 
 
 

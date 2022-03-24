@@ -5,6 +5,8 @@ function clickMenu(){
 //menu-hamburguer
 
 function toTop(){
-    scrollTo(0, 0) //animar o back to top
+    //scrollTo(0, 0)
+
+    window.scrollTo({top: 0, behavior: 'smooth'})
 }//back-to-top
 

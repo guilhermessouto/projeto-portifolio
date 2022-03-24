@@ -7,6 +7,13 @@
     <title>Portifólio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+
+    <!--
+        colocar link de site nos cards
+        animar o card
+        animar o header
+        clicar na lista e scroll pra section
+    -->
 </head>
 <body>
     <header>
@@ -42,7 +49,6 @@
         <h1>Conhecimentos</h1>
 
         <div class="sec-1-flex">
-
             <div class="icon">
                 <div class="align-icon">
                     <div id="html-icon"></div>
@@ -76,10 +82,62 @@
         <h1>Projetos</h1>
 
         <div class="sec-2-flex">
-            <div class="align-project" id="project1">p1</div>
-            <div class="align-project" id="project2">p2</div>
-            <div class="align-project" id="project3">p3</div>
+            <div class="align-project" id="project-1">
+                <div class="descriçao-hover">
+                    <div class="descriçao">
+                        <h2>Nome do site</h2>
+                        <div class="h3-flex">
+                            <h3 id="h3-html">HTML</h3>
+                            <h3 id="h3-css">CSS</h3>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam cumque ipsum, repellat assumenda eveniet alias nulla laudantium dignissimos earum accusantium.</p>
+                        <button>Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="align-project" id="project-2">
+                <div class="descriçao-hover">
+                    <div class="descriçao">
+                        <h2>Nome do site</h2>
+                        <div class="h3-flex">
+                            <h3 id="h3-html">HTML</h3>
+                            <h3 id="h3-css">CSS</h3>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam cumque ipsum, repellat assumenda eveniet alias nulla laudantium dignissimos earum accusantium.</p>
+                        <button>Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="align-project" id="project-3">
+                <div class="descriçao-hover">
+                    <div class="descriçao">
+                        <h2>Nome do site</h2>
+                        <h3 id="h3-js">JavaScript</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam cumque ipsum, repellat assumenda eveniet alias nulla laudantium dignissimos earum accusantium.</p>
+                        <button>Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section><!--/section2-->
+
+    <footer>
+        <div class="footer-flex">
+            <p>Powered by <a href="https://www.linkedin.com/in/guilherme-silveira-567b99211/" target="_blank" rel="external">Guilherme Souto</a></p>
+
+            
+            <div class="footer-icons">
+                <div id="github-icon">
+                    <a href="https://github.com/guilhermessouto" target="_blank" rel="external"><img src="imagens/github-icon.png"></a>
+                </div>
+                <div id="link-icon">
+                    <a href="https://www.linkedin.com/in/guilherme-silveira-567b99211/" target="_blank" rel="external"><img src="imagens/linkedin-icon.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer><!--footer-->
 </body>
 </html>
