@@ -1,19 +1,33 @@
 *{margin: 0;
     padding: 0;
     text-decoration: none;
-    list-style: none;}
+    list-style: none;
+    overflow-x: hidden;}
 
 :root{--roxo: rgb(106, 9, 197);
+    --roxoFraco: rgb(132, 0, 255);
     --roxoForte: rgb(34, 1, 65);;
-    --laranja: rgb(236, 154, 0);
-    --azul: rgb(8, 162, 252);
-    --amarelo: rgb(235, 235, 0);}
+    --laranja: rgb(255, 165, 0);
+    --azul: rgb(0, 162, 255);
+    --amarelo: rgb(255, 255, 0);}
+
 
 
 header{background-image: url(imagens/dev3.jpg);
     background-size: cover;
     background-position: center center;
-    height: 100vh}
+    height: 100vh;
+    width: 100%;
+    animation: zoom 2s;}
+
+@keyframes zoom{
+    0%{
+        transform: scale(1.11);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 
 .header-title{padding: 90px 0;
     width: 85%;
@@ -64,7 +78,8 @@ nav ul{background-color: var(--roxo);
     height: 0;
     transition: .7s;
     overflow-y: hidden;
-    border-radius: 5px;}
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px var(--roxo);}
 
 nav ul li{font-size: 1.2em;
     margin: 5px 5px;
@@ -72,8 +87,7 @@ nav ul li{font-size: 1.2em;
     text-align: end;
     cursor: pointer;
     font-weight: bolder;
-    color: white;
-    text-shadow: 1px 1px 1px black;}
+    color: rgb(236, 230, 230);}
 
 
 
@@ -96,8 +110,7 @@ nav ul li{font-size: 1.2em;
 
 .array-home p{color: white;
     font-size: 1.7em;
-    padding: 5px;
-    text-shadow: 1px 1px 1px blac2;}
+    padding: 5px;}
 
 
 
@@ -180,17 +193,19 @@ nav ul li{font-size: 1.2em;
 
 .sec-2-padding h1{text-align: center;
     font-size: 2.2em;
-    margin-bottom: 35px;}
+    margin-bottom: 25px;}
 
 .sec-2-flex{display: flex;
     justify-content: space-between;
     width: 75%;
     margin: auto;}
 
-.align-project{width: 18rem;
+.align-project{width: 19rem;
     height: 30rem;
     margin: 5px;
     border-radius: 7px;}
+
+.align-project:hover{box-shadow: 0px 0px 4px 2px var(--laranja);}
 
 #project-1{background-image: url(imagens/projeto-1.jpg);
     background-size: cover;
@@ -202,26 +217,22 @@ nav ul li{font-size: 1.2em;
     background-size: cover;
     background-position: center center;}
 
-
-
-.descriçao-hover{padding: 0 15px;
-    height: 30rem;
-    background-color: rgba(0, 0, 0, 0.678);
-    display: flex;
-    align-items: center;
-    border-radius: 7px;}
-
 .descriçao{visibility: hidden;
-    padding: 25px 0;}
+    height: 26.8rem;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;}
 
-.descriçao-hover:hover .descriçao{visibility: visible;}
-
+.descriçao-hover:hover .descriçao{visibility: visible;
+    background-color: rgba(0, 0, 0, 0.678);}
 
 
 .descriçao h2{font-size: 2em;
     margin-bottom: 15px;
-    color: var(--roxo);
-    text-shadow: 2px 2px 2px black;}
+    color: var(--roxoFraco);
+    text-shadow: 1px 1px 1px black;}
 
 .descriçao h3{font-size: 1.4em;
     margin-bottom: 15px;}
@@ -230,7 +241,7 @@ nav ul li{font-size: 1.2em;
     margin-bottom: 35px;
     text-align: justify;
     color: white;
-    text-shadow: 2px 2px 2px black;}
+    text-shadow: 1px 1px 1px black;}
 
 .descriçao button{padding: 15px 25px;
     background-color: var(--roxo);
@@ -238,8 +249,7 @@ nav ul li{font-size: 1.2em;
     font-weight: bold;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: .95em;}
+    cursor: pointer;}
 
 .h3-flex{display: flex;
     justify-content: space-between;
@@ -251,14 +261,7 @@ nav ul li{font-size: 1.2em;
 
 
 
-
-
-
-
-
-
-
-footer{padding: 40px 0;
+footer{padding: 50px 0;
     background-color: var(--roxoForte);}
 
 .footer-flex{display: flex;
@@ -268,8 +271,7 @@ footer{padding: 40px 0;
     margin: auto;}
 
 .footer-flex p{color: white;
-    font-size: 1.1em;
-    text-shadow: 3px 3px 3px black;}
+    font-size: 1.1em;}
 .footer-flex a{color: var(--laranja);}
 a:hover{text-decoration: underline;}
 
